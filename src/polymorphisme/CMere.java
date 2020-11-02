@@ -5,11 +5,14 @@ package polymorphisme;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Damien
  */
-class CMere {
-    
+public class CMere {
+
+    void m() {
+        System.out.println("Je suis un objet CMere.");
+    }
+
 }
