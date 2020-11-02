@@ -22,23 +22,34 @@ public class Main {
         calc.calculateur = new CCalculateur();
         calc.console = new CConsole();
 
-        System.out.println("Quelle version d'afficheur souhaitez-vous ? 1 ou 2");
-        int choix = sc.nextInt();
-        switch (choix) {
-            case 1:
+        switch (args[0]) {
+            case "afficheur1":
                 calc.afficheur = new CAfficheurStyle1();
                 break;
-            case 2:
+            case "afficheur2":
                 calc.afficheur = new CAfficheurStyle2();
                 break;
             default:
                 System.out.println("Erreur !");
                 break;
         }
+
+//        System.out.println("Quelle version d'afficheur souhaitez-vous ? 1 ou 2");
+//        int choix = sc.nextInt();
+//        switch (choix) {
+//            case 1:
+//                calc.afficheur = new CAfficheurStyle1();
+//                break;
+//            case 2:
+//                calc.afficheur = new CAfficheurStyle2();
+//                break;
+//            default:
+//                System.out.println("Erreur !");
+//                break;
+//        }
 //        calc.afficheur = new CAfficheurStyle1();
 //        //OU
 //        calc.afficheur = new CAfficheurStyle2();
-
         calc.afficheur.afficherResultat();
 
     }
